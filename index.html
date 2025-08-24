@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Nicholas Souza</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="inicialização">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Inicio</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contatos</a></li>
+        </ul>
+    </nav>
+    <main id="inicio" class="home">
+      
+    <!-- Imagem de fundo -->
+    <img src="img/techpurple.jpg" alt="Fundo tecnológico" class="bg-img">
+
+    <!-- Camada escura por cima -->
+    <div class="overlay"></div>
+
+    <!-- Conteúdo do header -->
+    <div class="container header-content">
+        <img src="/img/perfil.png" alt="Foto de Nicholas Souza" class="perfil">
+        <h1>Nicholas Souza</h1>
+        <p>Programador • Desenvolvedor Web</p>
+        <div class="language">
+            <img src="./img/icons8-html-96.png" alt="html">
+            <img src="./img/icons8-css-96.png" alt="CSS">
+            <img src="./img/icons8-js-96.png" alt="JS">
+            <img src="./img/icons8-github-96.png" alt="Github">
+            <img src="./img/icons8-visual-studio-code-2019-96.png" alt="VScode">
+        </div>
+      </div>
+  </header>
+</main>
+    <!-- SOBRE MIM -->
+     <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+💻 Sou um desenvolvedor apaixonado por tecnologia. 📱<br>
+<br>💼Aqui você encontrará meus projetos, habilidades e meu contato!
+<br>📌 Tenho 3 projetos desenvolvidos em HTML, CSS, JavaScript​: 
+<br>No qual um foi desenvolvido no curso de Desenvolvedor Front - End, no (DevClub). 
+<br>🎓 Comecei uma nova etapa do curso DevClub, como desenvolvedor Full-Stack, estou para realizar o segundo projeto do curso. 
+<br>Realizei dois projetos, um visual web para futuro interesse de uma transportadora e um E-commerce, moderno e responsivo.
+<br>🖥️ Quero unir minha paixão por tecnologia com meu desejo de criar soluções inovadoras e eficientes.
+Estou pronto para aplicar meu amor por automação e desenvolvimento em projetos que façam a diferença.
+Sou fascinado pela capacidade que a tecnologia tem de transformar ideias em realidade e estou comprometido em me tornar um desenvolvedor de sucesso.
+
+        </p>
+      </div>
+    </section>
+
+   <!-- PROJETOS -->
+<section id="projetos">
+  <div class="container">
+    <h2>Projetos</h2>
+    <div class="Projetos-caixa">
+      <!-- Projeto 1 -->
+      <div class="Projetos-card">
+        <h3 class="titulo-projeto1">Projeto 1</h3>
+        <img src="./img/mario.png" alt="projeto-mario">
+        <div class="caixa-texto-p">
+          <h3 class="info-projetos">Irmãos Encanadores</h3>
+          <p class="p-projetos">
+            Um site fictício e visualmente impactante para os encanadores mais famosos dos videogames: Mario & Luigi. 
+            Projeto desenvolvido com HTML, CSS e JavaScript, incorporando vídeo de fundo, formulário funcional, botão 
+            flutuante de WhatsApp e responsividade para diferentes dispositivos.
+          </p>
+          <a href="https://nicholas10souza.github.io/PROJETO-MARIO-ENCANADOR/" target="_blank" class="botao-projeto">
+            Acessar Projeto
+          </a>
+        </div>
+      </div>
+
+       <!-- Projeto 2 -->
+      <div class="Projetos-card">
+        <h3 class="titulo-projeto1">Projeto 2</h3>
+        <img src="./img/transportadora.png" alt="projeto-transportadora">
+        <div class="caixa-texto-p">
+          <h3 class="info-projetos">Site transportadora</h3>
+          <p class="p-projetos">
+            Um site fictício e visualmente impactante para uma transportadora que atua com importação e exportação. 
+            Projeto desenvolvido com HTML, CSS e JavaScript, incorporando vídeo de fundo, com responsividade para diferentes dispositivos.
+          </p>
+          <a href="https://nicholas10souza.github.io/PROJETO-TRANSPORTADORA/" target="_blank" class="botao-projeto">
+            Acessar Projeto
+          </a>
+        </div>
+      </div>
+
+       <!-- Projeto 3 -->
+      <div class="Projetos-card">
+        <h3 class="titulo-projeto1">Projeto 3</h3>
+        <img src="./img/E-commerce.png" alt="projeto-e-commerce">
+        <div class="caixa-texto-p">
+          <h3 class="info-projetos">Site de E-commerce</h3>
+          <p class="p-projetos">
+            Um site E-commerce e visualmente impactante, moderno e responsivo para diferentes dispositivos. 
+            Projeto desenvolvido com HTML, CSS e JavaScript, incorporando com diversos produtos
+          </p>
+          <a href="https://nicholas10souza.github.io/PROJETO-ECOMMERCE/" target="_blank" class="botao-projeto">
+            Acessar Projeto
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- CONTATO -->
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo"> Contato</h2>
+        <form class="formulário-contato" id="formulário" onsubmit="enviarwhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="6"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+
+    <footer>
+      <p>&copy; 2025 Nicholas Souza - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+  
+  </body>
+
+
+</html>

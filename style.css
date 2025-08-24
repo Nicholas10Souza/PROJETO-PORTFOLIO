@@ -1,0 +1,343 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-principal: #9b27b0;
+    --cor-secundaria: #d500f9;
+    --cor-fundo: #0d0221;
+    --cor-texto: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.inicialização {
+    position: fixed;
+    top: 0;
+    background: #0d0221;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+    backdrop-filter: blur(30px);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--cor-principal), var(--cor-secundaria));
+    transition: width 0.4s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+/* Imagem de fundo */
+header .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* mostra a imagem inteira */
+    object-position: center; /* centraliza */
+    background-color: var(--cor-fundo); /* cor de fundo para áreas vazias */
+    z-index: 0;
+}
+
+/* Camada escura por cima do fundo */
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 2, 33, 0.6);
+    z-index: 1;
+}
+
+/* Conteúdo do header */
+header {
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animação flutuar */
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+header .container {
+    position: relative;
+    top: 65%; /* Move o conteúdo para o meio */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    height: 160px; /* Define uma altura para o elemento */
+}
+
+header .perfil {
+    box-shadow: 0 0 20px var(--cor-secundaria);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--cor-principal);
+    animation: flutuar 5s ease-in-out infinite;
+    object-fit: cover;    
+}
+
+header h1 {
+    font-size: 2.3rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.language img {
+    width: 50px;
+}
+
+/* SEÇÕES */
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--cor-secundaria);
+    padding: 0.5rem;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: var(--cor-principal);
+    color: var(--cor-fundo);
+}
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* PROJETOS */
+.grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.titulo-projeto1 {
+    color: #40127c; /* Cor padrão do texto */
+}
+
+.titulo-projeto1:hover {
+    color: rgb(23, 23, 196); /* Cor do texto ao passar o mouse */
+}
+
+.mario-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 20px; /* distância entre o título e a imagem */
+    }
+
+/* Container dos projetos - em grade */
+.Projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Cada card */
+.Projetos-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagem */
+.Projetos-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Texto */
+.caixa-texto-p {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título */
+.info-projetos {
+    font-size: 1.3rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+/* Descrição */
+.p-projetos {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+/* Botão */
+.botao-projeto {
+    display: inline-block;
+    background: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.botao-projeto:hover {
+    background: var(--cor-principal);
+}
+
+/* Efeito no hover */
+.Projetos-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px var(--cor-secundaria);
+}
+
+/* FORMULÁRIO */
+.formulário-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(126, 126, 126, 0.1);
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blu(5px);
+    padding: 2rem;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(126, 126, 126, 0.1);
+    border-radius: 8px;
+    color: var(--cor-texto);
+    border: 1px solid var(--vidro);
+    outline: none;
+}
+
+.campo-form:focus {
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 10px var(--cor-principal);
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+
+}
+
+.botao-form {
+    color: var(--cor-fundo);
+    background: linear-gradient(45deg, var(--cor-principal), var(--cor-secundaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.botao-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 10px var(--cor-principal);
+    transition: all 0.5s ease;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--cor-principal);
+    margin-top: 20px;
+}
