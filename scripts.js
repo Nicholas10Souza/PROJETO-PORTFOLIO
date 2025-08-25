@@ -18,3 +18,20 @@ function enviarwhats(event) {
 
   window.open(url, '_blank');
 }
+// Menu hambúrguer
+const menuButton = document.querySelector(".menu-button");
+const menu = document.querySelector(".menu");
+
+// abre/fecha o menu
+menuButton.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
+// fecha o menu ao clicar em um link
+const links = document.querySelectorAll(".menu-link");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+});

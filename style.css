@@ -341,3 +341,80 @@ footer {
     background-color: var(--cor-principal);
     margin-top: 20px;
 }
+
+/* Botão menu hambúrguer */
+.menu-button {
+  width: 35px;
+  cursor: pointer;
+  display: none; /* escondido no desktop */
+  filter: invert(1); /* deixa branco se for ícone preto */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block; /* aparece no mobile */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+  }
+
+  .menu {
+    display: none; /* escondido por padrão */
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(13, 2, 33, 0.95);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: right;
+  }
+
+  .menu.active {
+    display: flex; /* aparece quando ativo */
+  }
+}
+
+/* Media Query para telas menores que 400px */
+@media (max-width: 400px) {
+    header {
+        height: 500px; /* Diminuindo a altura do header */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Reduzindo o tamanho da fonte do título */
+    }
+
+    header p {
+        font-size: 1rem; /* Reduzindo o tamanho da fonte do parágrafo */
+    }
+
+    .menu {
+        flex-direction: column; /* Mudando o menu para uma coluna */
+        gap: 0rem; /* Diminui o espaço entre os itens do menu */
+    }
+
+    .menu-link {
+        font-size: 0.9rem; /* Reduzindo o tamanho da fonte do link */
+    }
+
+    .perfil {
+        width: 100px; /* Reduzindo o tamanho da imagem do perfil */
+        height: 100px; /* Mantendo a proporção */
+    }
+
+    .sobre-caixa {
+        padding: 0rem; /* Diminuindo o padding da caixa */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Mudando para uma coluna em vez de várias */
+    }
+
+    .botao-form {
+        padding: 0.8rem; /* Diminuindo o padding do botão */
+    }
+}
