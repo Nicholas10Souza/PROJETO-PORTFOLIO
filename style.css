@@ -377,44 +377,57 @@ footer {
     display: flex; /* aparece quando ativo */
   }
 }
-
 /* Media Query para telas menores que 400px */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     header {
-        height: 500px; /* Diminuindo a altura do header */
+        height: 520px; /* um pouco mais alto para não cortar */
     }
 
     header h1 {
-        font-size: 1.8rem; /* Reduzindo o tamanho da fonte do título */
+        font-size: 1.8rem;
     }
 
     header p {
-        font-size: 1rem; /* Reduzindo o tamanho da fonte do parágrafo */
+        font-size: 1rem;
     }
 
     .menu {
-        flex-direction: column; /* Mudando o menu para uma coluna */
-        gap: 0rem; /* Diminui o espaço entre os itens do menu */
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .menu-link {
-        font-size: 0.9rem; /* Reduzindo o tamanho da fonte do link */
+        font-size: 0.9rem;
     }
 
     .perfil {
-        width: 100px; /* Reduzindo o tamanho da imagem do perfil */
-        height: 100px; /* Mantendo a proporção */
+        width: 100px;
+        height: 100px;
     }
 
     .sobre-caixa {
-        padding: 0rem; /* Diminuindo o padding da caixa */
+        padding: 0.5rem;
     }
 
     .grid {
-        grid-template-columns: 1fr; /* Mudando para uma coluna em vez de várias */
+        grid-template-columns: 1fr;
     }
 
     .botao-form {
-        padding: 0.8rem; /* Diminuindo o padding do botão */
+        padding: 0.8rem;
+    }
+
+    /* ✅ ajuste para os ícones não sumirem */
+    .language {
+        display: flex;
+        flex-wrap: wrap; /* quebra linha se necessário */
+        justify-content: center;
+        gap: 5px; /* espaço menor entre ícones */
+        margin-top: 10px;
+    }
+
+    .language img {
+        width: 35px; /* ícones menores pra caber */
+        height: auto;
     }
 }
