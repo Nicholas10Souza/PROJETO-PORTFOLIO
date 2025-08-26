@@ -377,10 +377,11 @@ footer {
     display: flex; /* aparece quando ativo */
   }
 }
-/* Media Query para telas menores que 400px */
+
+/* Até 500px */
 @media (max-width: 500px) {
     header {
-        height: 520px; /* um pouco mais alto para não cortar */
+        height: 520px;
     }
 
     header h1 {
@@ -417,17 +418,75 @@ footer {
         padding: 0.8rem;
     }
 
-    /* ✅ ajuste para os ícones não sumirem */
+    /* ✅ Ajuste ícones */
     .language {
         display: flex;
-        flex-wrap: wrap; /* quebra linha se necessário */
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 5px; /* espaço menor entre ícones */
+        gap: 5px;
         margin-top: 10px;
     }
 
     .language img {
-        width: 35px; /* ícones menores pra caber */
+        width: 35px;
         height: auto;
+    }
+}
+
+/* Até 498px */
+@media (max-width: 498px) {
+    header {
+        height: 530px; /* aumenta um pouco mais */
+    }
+
+    .language img {
+        width: 32px; /* reduz um pouco mais */
+    }
+}
+
+/* Até 398px */
+@media (max-width: 398px) {
+    header {
+        height: 540px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .language img {
+        width: 30px;
+    }
+}
+
+/* Até 300px */
+@media (max-width: 300px) {
+    header {
+        height: 560px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    .perfil {
+        width: 80px;
+        height: 80px;
+    }
+
+    .language {
+        gap: 3px;
+    }
+
+    .language img {
+        width: 26px; /* bem menor para caber */
     }
 }
